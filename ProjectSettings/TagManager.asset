@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SoundManager
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Last
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 2045998183
+    locked: 0
+  - name: Invisible
+    uniqueID: 1737622977
+    locked: 0
+  - name: Grid
+    uniqueID: 3370779129
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Top1
+    uniqueID: 986796689
+    locked: 0
+  - name: Top
+    uniqueID: 706444273
+    locked: 0

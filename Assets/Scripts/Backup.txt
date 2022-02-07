@@ -1,0 +1,97 @@
+﻿    private static bool Swapping = false;
+    private static bool SwapBack = false;
+    private static bool Destroying = false;
+    private static bool Shifting = false;
+
+    private Vector3 mouseDown;
+    List<Tuple<int, int>> destItems = new List<Tuple<int, int>>();
+    List<Tuple<int, int>> MovingItems = new List<Tuple<int, int>>();
+
+    /*
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Collider2D obj = Physics2D.OverlapPoint(mouse);
+
+        if (!Swapping && !Destroying && !Shifting)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                mouseDown = mouse;
+                this.selected = GetGridItem(mouse);
+            }
+
+            if (Input.GetMouseButtonUp(0) && this.selected != null)
+            {
+                Tuple<int, int> direction = getMouseDirection(mouseDown, mouse);
+                this.selected2 = new Tuple<int, int>(selected.Item1 + direction.Item1, selected.Item2 + direction.Item2);
+                Debug.Log("Selected 1: " + this.selected.ToString() + " | Selected 2: " + this.selected2.ToString());
+
+                if (MakeMove(selected, selected2))
+                    Swapping = true;
+                else
+                {
+                    this.selected = null;
+                    this.selected2 = null;
+                }
+            }
+        }
+
+        if (Swapping && CheckSwap(selected, selected2))
+        {
+            if (!SwapBack)
+            {
+                List<Tuple<int, int>> items = CheckMatchingItems(selected);
+                List<Tuple<int, int>> items2 = CheckMatchingItems(selected2);
+
+                if (items.Count < 3 && items2.Count < 3)
+                {
+                    MakeMove(selected, selected2);
+                    SwapBack = true;
+                    destItems.Clear();
+                }
+                else
+                {
+                    if (items.Count >= 3)
+                        destItems.AddRange(items);
+                    if (items2.Count >= 3)
+                        destItems.AddRange(items2);
+
+                    SetDestroyItems(destItems);
+                    Swapping = false;
+                    Destroying = true;
+
+                    foreach (Tuple<int, int> t in destItems)
+                    {
+                        Debug.Log(t.ToString() + " , " + BaloonList[t.Item1, t.Item2].GetComponent<Baloon>().color.ToString());
+                    }
+                }
+            }
+            else
+            {
+                this.selected = null;
+                this.selected2 = null;
+                Swapping = false;
+                SwapBack = false;
+            }
+        }
+
+        if (Destroying && CheckDestroying(destItems))
+        {
+            DestroyItems(destItems);
+            destItems.Clear();
+            Destroying = false;
+            CheckNullTiles(this.MovingItems);
+            if (MovingItems.Count > 0)
+                Shifting = true;
+        }
+
+        if (Shifting && CheckShift())
+        {
+            MovingItems.Clear();
+            Shifting = false;
+        }
+
+    }
+        */
