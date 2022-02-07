@@ -2,6 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
+*.dll
+*.class
+*.exe
+*.o
+*.so
+*.com
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
